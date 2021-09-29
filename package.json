@@ -6,8 +6,6 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack",
-    "test": "",
-    "lint": "",
     "eslint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/",
     "eslint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/ --fix",
     "stylelint": "stylelint \"./src/app/**/**.scss\"",
@@ -15,9 +13,9 @@
   },
   "keywords": [],
   "author": {
-    "name": "",
-    "email": "",
-    "url": ""
+    "name": "Aleksandrs Bogackins",
+    "email": "a.bogackins@gmail.com",
+    "url": "https://github.com/winniepukki"
   },
   "license": "",
   "repository": {
