@@ -22,7 +22,7 @@ export const App: FC = () => (
                 target='_blank'
                 rel='noopener noreferrer'
             >
-                Learn Reaktive-CLI
+                Learn Reaktive-CLI!
             </a>
         </header>
     </div>
