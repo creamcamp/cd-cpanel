@@ -1,5 +1,5 @@
-on: push
-name: 🚀 Deploy website on push
+on: release
+name: 🚀 Deploy website on release
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -21,7 +21,6 @@ jobs:
     - name: List output files
       run: | 
         find dist/ -print
-        sudo chmod -R 777 dist
       
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
