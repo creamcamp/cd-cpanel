@@ -1,0 +1,78 @@
+{
+  "name": "cd-cpanel",
+  "version": "0.0.1-alpha.1",
+  "description": "",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "test": "",
+    "lint": "",
+    "eslint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/",
+    "eslint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/ --fix",
+    "stylelint": "stylelint \"./src/app/**/**.scss\"",
+    "stylelint:fix": "npx stylelint \"./src/app/**/**.scss\" --fix"
+  },
+  "keywords": [],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "license": "",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "bugs": {
+    "url": "",
+    "email": ""
+  },
+  "homepage": "",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^6.2.0",
+    "lint-staged": "^10.5.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-winniepukki-guidelines": "^2.1.1",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "^4.3.8",
+    "mini-css-extract-plugin": "^2.2.2",
+    "prettier": "^2.3.2",
+    "sass": "^1.39.0",
+    "sass-loader": "^12.1.0",
+    "source-map-loader": "^3.0.0",
+    "style-loader": "^3.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.20.1",
+    "svg-url-loader": "^6.0.0",
+    "typescript": "^3.9.10",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0"
+  }
+}

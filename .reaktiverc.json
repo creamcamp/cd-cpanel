@@ -1,0 +1,7 @@
+{
+  "name": "cd-cpanel",
+  "git": false,
+  "eslint": true,
+  "manager": "npm",
+  "template": "typescript"
+}
