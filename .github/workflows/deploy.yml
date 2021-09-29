@@ -1,39 +1,27 @@
-name: Publish Website to CPanel 🚀 
-on:
-  push:
-    branches:
-      - main
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  Prepare-build:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2.1.0
-        with:
-          fetch-depth: 2
-      - name: Create build
-        run: |
-          npm install
-          npm run build
-          ls -la
-        
-
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
-    needs: [Prepare-build]
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 12
+      uses: actions/setup-node@v2-beta
       with:
-          fetch-depth: 2
-    - name: Create build
+        node-version: '12'
+      
+    - name: 🔨 Build Project
       run: |
         npm install
         npm run build
-        ls -la
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
+    
+    - name: List output files
+      run: find build/ -print
+      
+    - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         server: ${{ secrets.FTP_SERVER }}
