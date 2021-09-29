@@ -24,6 +24,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2.1.0
       with:
+          fetch-depth: 2
+    - name: Create build
+      run: |
+        npm install
+        npm run build
+        ls -la
+    - uses: actions/checkout@v2.1.0
+      with:
         fetch-depth: 2
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
