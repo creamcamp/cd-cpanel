@@ -8,6 +8,11 @@ jobs:
     name: 👷🏻 Test
     runs-on: ubuntu-latest
     steps:
+      - name: Use Node.js 12
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+
       - name: 🔥 Run smoke tests
         run: |
           npm install
