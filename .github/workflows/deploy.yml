@@ -4,6 +4,16 @@ on:
     branches:
       - main
 jobs:
+  check-files:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Check contents
+           run: ls -la
+         - name: Build the project
+           run: |
+             npm run build
+             ls -la
+
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
