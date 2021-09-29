@@ -21,7 +21,7 @@ jobs:
     - name: List output files
       run: | 
         find dist/ -print
-        chmod 0777 dist
+        sudo chmod -R 777 dist
       
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
