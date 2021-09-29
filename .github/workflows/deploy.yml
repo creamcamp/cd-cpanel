@@ -19,6 +19,7 @@ jobs:
 
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
+    needs: [Prepare-build]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.1.0
