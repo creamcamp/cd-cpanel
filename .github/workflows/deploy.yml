@@ -4,15 +4,18 @@ on:
     branches:
       - main
 jobs:
-  check-files:
+  Prepare-build:
       runs-on: ubuntu-latest
       steps:
-         - name: Check contents
-           run: ls -la
-         - name: Build the project
-           run: |
-             npm run build
-             ls -la
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
+      - name: Create build
+        run: |
+          npm install
+          npm run build
+          ls -la
+        
 
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
